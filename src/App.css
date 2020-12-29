@@ -1,18 +1,65 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5vAw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/staatliches/v5/HI_OiY8KO6hCsQSoAPmtMbec.ttf) format('truetype');
+}
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.positiveAmount {
+  color: green;
+}
+.navBar {
+  background-color: #BCE784;
+  height: 15vh;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+}
+.navBar a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: black;
+}
+.negativeAmount {
+  color: red;
+}
+.balance {
+  font-family: 'Staatliches', cursive;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 5vh;
+  font-size: 6vh;
+}
+.deleteButton {
+  height: 3vh;
+  width: 3vh;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,11 +70,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
