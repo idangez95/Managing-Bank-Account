@@ -1,7 +1,6 @@
 import React, { Component} from 'react';
 
 class Operations extends Component {
-
     constructor() {
         super();
         this.state = {
@@ -9,7 +8,6 @@ class Operations extends Component {
             vendorInput: "",
             categoryInput: ""
         }
-
     }
 
     handlerInputs = (event) =>{
@@ -20,8 +18,6 @@ class Operations extends Component {
         })
     }
 
-    
-
     addDeposit = () =>{
         let amount = parseInt(this.state.amountInput)
         let vendor = this.state.vendorInput
@@ -29,7 +25,6 @@ class Operations extends Component {
 
         const newTransaction = {amount, vendor, category}
         this.props.postTransaction(newTransaction)
-        
     }
 
     addWithdraw = () =>{
@@ -42,25 +37,25 @@ class Operations extends Component {
     }
 
     render(){
-        
         return(
-            <div>
-                <div>
+            <div className="operations">
+                <div className="operations-title">
+                    Please write down your next operation
+                </div>
+                <div className="operations-amount">
                     Amount: <input onChange={this.handlerInputs} name="amountInput" type="number" />
                 </div>
 
-                <div>
+                <div className="operations-vendor">
                     Vendor: <input onChange={this.handlerInputs} name="vendorInput" type="text" />
                 </div>
 
-                <div>
+                <div className="operations-category">
                     Category: <input onChange={this.handlerInputs} name="categoryInput" type="text" />
                 </div>
 
-                <button onClick={this.addWithdraw}>Withdraw</button> <button onClick={this.addDeposit}>Deposit</button>
+                <button className="operations-withdraw" onClick={this.addWithdraw}>Withdraw</button> <button className="operations-deposit" onClick={this.addDeposit}>Deposit</button>
             </div>
-            
-
         )
     }
 }

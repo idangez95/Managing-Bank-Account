@@ -31,7 +31,9 @@ router.get('/categories', async (req, res) =>{
                 totalAmount: {$sum:"$amount"}
             }
         }
-    ]).exec((error,response) => res.send(response))
+    ]).exec((error,response) => {
+        res.send(response)
+    })
 })
 
 
