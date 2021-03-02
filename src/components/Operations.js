@@ -54,7 +54,8 @@ class Operations extends Component {
                     Category: <input onChange={this.handlerInputs} name="categoryInput" type="text" />
                 </div>
 
-                <button className="operations-withdraw" onClick={this.addWithdraw}>Withdraw</button> <button className="operations-deposit" onClick={this.addDeposit}>Deposit</button>
+                <button className="operations-withdraw" onClick={this.addWithdraw}>Withdraw</button>
+                <button className="operations-deposit" onClick={this.addDeposit}>Deposit</button>
             </div>
         )
     }
