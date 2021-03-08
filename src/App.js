@@ -29,20 +29,20 @@ class App extends Component {
   }
 
   async getTransactions() {
-    return await axios.get("http://localhost:4200/transactions")
+    return await axios.get("/transactions")
   }
 
   async getCategoriesFromDB() {
-    return await axios.get("http://localhost:4200/categories")
+    return await axios.get("/categories")
   }
 
   postTransaction = async (newTransaction) => {
-    const response = await axios.post("http://localhost:4200/transaction", newTransaction)
+    const response = await axios.post("/transaction", newTransaction)
     this.setState({ transactions: response.data })
   }
 
   deleteTransaction = async (transactionId) => {
-    const response = await axios.delete(`http://localhost:4200/transaction/${transactionId}`)
+    const response = await axios.delete(`/transaction/${transactionId}`)
     this.setState({ transactions: response.data })
   }
 
