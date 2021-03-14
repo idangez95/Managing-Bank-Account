@@ -1,4 +1,4 @@
-# My first full-stack app: Managing Bank Account
+# My first full-stack app: Napoleon-Bank
 
 Tracking expenses and incomes in our bank account.
 
